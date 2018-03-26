@@ -9,19 +9,19 @@ Refer [Building Webapp](https://zcms.zohocorp.com/crm/help/developer/webapp-sdk/
 
 **Please follow the steps to work with JS SDK**
 * Register the client from CRM UI and note the client id
-* Create a new project using the command '**zet init**' via terminal/command line. Choose the option '**ZES**' and give the project name.
+* Create a new project using the command '**zet init**' via terminal/command line. Choose the option '**Catalyst**' and give the project name.
 * New folder will be created with the project name. Inside that, there will be a file **plugin\_manifest.json**. Update the client id in that file and required scopes to be used in the web app
 * Under the project folder, there will be another folder named '**app**'. This will act as the base.
 * Include the '**zcrmsdk.js**' file (available in _app_ folder) and use it in your html files.
 * **ZCRM.API.AUTH.getAccess()** will create a token by authenticating the user.
 * After the development, run the command '**zet pack**' from the project base folder and upload it in CRM UI. FYI: Only one app can be uploaded for each client. While updating with new app, old one has to be deleted. Also redirect url will be changed.
 * To know the redirect url, ZCRM.API.AUTH.getAccess() function has to be accessed from web app. It'll redirect to accounts.zoho.com/oauth/v2/auth along with a parameter redirect\_uri. Take that redirect\_uri and configure it in accounts.zoho.com/developerconsole. 
-Eg : if the redirect\_uri is "`https://99000000223015.localzappscontents.com/appfiles/99000000223015/1.0/1dd62561c00429f2c4970bf4f2b4dc09142d08b6949a17a5c3388f30851ec9cf/redirect.html`"
+Eg : if the redirect\_uri is "`https://67000000082267.zappsusercontent.com/appfiles/99000000223015/1.0/1dd62561c00429f2c4970bf4f2b4dc09142d08b6949a17a5c3388f30851ec9cf/redirect.html`"
 Then 
 
-	"**Client Domain**" is "`99000000223015.localzappscontents.com`"
+	"**Client Domain**" is "`67000000082267.zappsusercontent.com`"
 
-	"**JavaScript Domain**" is "`https://99000000223015.localzappscontents.com`"
+	"**JavaScript Domain**" is "`https://67000000082267.zappsusercontent.com`"
 
 _PS_ : Note the https configuration difference in "Client Domain" and "JavaScript Domain".
 
